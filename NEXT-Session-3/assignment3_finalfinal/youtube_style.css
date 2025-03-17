@@ -1,0 +1,270 @@
+.container {
+    display: grid;
+    height: 100vh;   
+}
+    .header { grid-area: header; background: white; padding-left: 110px;margin-top: 0px;}
+    .main { grid-area: main; background: white; padding-left: 60px; margin-top: 200px;}
+        .main img {max-width: 100%; height: auto;}
+        .main1_1 {
+            grid-column: 1 / span 2; /* 가로로 2칸 차지 */
+        }
+        .main2_1 {
+            grid-column: 1 / span 2; /* 가로로 2칸 차지 */
+        }
+        .main3_1 {
+            grid-column: 1 / span 2; /* 가로로 2칸 차지 */
+        }
+        .main4_1 {
+            grid-column: 1 / span 2; /* 가로로 2칸 차지 */
+        }
+        .main5_1 {
+            grid-column: 1 / span 2; /* 가로로 2칸 차지 */
+        }
+        .main6_1 {
+            grid-column: 1 / span 2; /* 가로로 2칸 차지 */
+        }
+    .left {
+        grid-area: left; background: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* 세로 중앙 정렬 */
+    }
+        .left img {
+            display: block; /* `inline` 특성을 없애고 정렬을 안정적으로 만듦 */
+        }
+    .header, .left{
+        position: fixed;
+        z-index: 1000;
+    }
+    
+
+@media (min-width: 1025px) {
+    .container {
+    /* 해상도가 1025px 이상일 때 (desktop) */
+    display: grid;
+    grid-template-columns: 1fr 13fr; 
+    grid-template-rows: 4fr 4fr 6fr;
+    grid-template-areas:
+    "left header"
+    "left header2"
+    "left main";
+    }
+
+        .main {
+        display: grid;
+        grid-template-columns: 4fr 4fr 4fr; 
+        grid-template-rows: 1.5fr 2fr;
+        grid-template-areas:
+        "main1 main2 main3"
+        "main4 main5 main6";
+        }
+
+            .main1 {
+            display: grid;
+            grid-template-columns: 0.5fr 3.5fr;
+            grid-template-rows: 1fr 0.5fr; 
+            grid-template-areas:
+            "main1_1 main1_1"
+            "main1_2 main1_3";
+            }
+
+            .main2 {
+            display: grid;
+            grid-template-columns: 0.5fr 3.5fr;
+            grid-template-rows: 1fr 0.5fr; 
+            grid-template-areas:
+            "main1_1 main1_1"
+            "main1_2 main1_3";
+            }
+
+            .main3 {
+            display: grid;
+            grid-template-columns: 0.5fr 3.5fr;
+            grid-template-rows: 1fr 0.5fr; 
+            grid-template-areas:
+            "main1_1 main1_1"
+            "main1_2 main1_3";
+            }
+
+            .main4 {
+            display: grid;
+            grid-template-columns: 0.5fr 3.5fr;
+            grid-template-rows: 1fr 1fr; 
+            grid-template-areas:
+            "main1_1 main1_1"
+            "main1_2 main1_3";
+            }
+
+            .main5 {
+            display: grid;
+            grid-template-columns: 0.5fr 3.5fr;
+            grid-template-rows: 1fr 1fr; 
+            grid-template-areas:
+            "main1_1 main1_1"
+            "main1_2 main1_3";
+            }
+
+            .main6 {
+            display: grid;
+            grid-template-columns: 0.5fr 3.5fr;
+            grid-template-rows: 1fr 1fr; 
+            grid-template-areas:
+            "main1_1 main1_1"
+            "main1_2 main1_3";
+            }
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+    .container {
+        /* 해상도가 1025px 이상일 때 (desktop) */
+        display: grid;
+        grid-template-columns: 1fr 13fr; 
+        grid-template-rows: 4fr 4fr 6fr;
+        grid-template-areas:
+        "left header"
+        "left header2"
+        "left main";
+        }
+    
+            .main {
+            display: grid;
+            grid-template-columns: 4fr 4fr; 
+            grid-template-rows: 1.5fr 2fr 2fr;
+            grid-template-areas:
+            "main1 main2"
+            "main3 main4"
+            "main5 main6";
+            }
+
+                .main1 {
+                display: grid;
+                grid-template-columns: 0.5fr 3.5fr;
+                grid-template-rows: 1fr 0.5fr; 
+                grid-template-areas:
+                "main1_1 main1_1"
+                "main1_2 main1_3";
+                }
+    
+                .main2 {
+                display: grid;
+                grid-template-columns: 0.5fr 3.5fr;
+                grid-template-rows: 1fr 0.5fr; 
+                grid-template-areas:
+                "main1_1 main1_1"
+                "main1_2 main1_3";
+                }
+    
+                .main3 {
+                display: grid;
+                grid-template-columns: 0.5fr 3.5fr;
+                grid-template-rows: 1fr 0.5fr; 
+                grid-template-areas:
+                "main1_1 main1_1"
+                "main1_2 main1_3";
+                }
+    
+                .main4 {
+                display: grid;
+                grid-template-columns: 0.5fr 3.5fr;
+                grid-template-rows: 1fr 1fr; 
+                grid-template-areas:
+                "main1_1 main1_1"
+                "main1_2 main1_3";
+                }
+    
+                .main5 {
+                display: grid;
+                grid-template-columns: 0.5fr 3.5fr;
+                grid-template-rows: 1fr 1fr; 
+                grid-template-areas:
+                "main1_1 main1_1"
+                "main1_2 main1_3";
+                }
+    
+                .main6 {
+                display: grid;
+                grid-template-columns: 0.5fr 3.5fr;
+                grid-template-rows: 1fr 1fr; 
+                grid-template-areas:
+                "main1_1 main1_1"
+                "main1_2 main1_3";
+                }
+    }
+
+@media (max-width: 768px) {
+    .container {
+        /* 해상도가 1025px 이상일 때 (desktop) */
+        display: grid;
+        grid-template-columns: 1fr 13fr; 
+        grid-template-rows: 4fr 4fr 6fr;
+        grid-template-areas:
+        "left header"
+        "left header2"
+        "left main";
+        }
+    
+            .main {
+            display: grid;
+            grid-template-areas:
+            "main1"
+            "main2"
+            "main3"
+            "main4"
+            "main5"
+            "main6";
+            }
+            
+                .main1 {
+                display: grid;
+                grid-template-columns: 0.5fr 3.5fr;
+                grid-template-rows: 1fr 0.5fr; 
+                grid-template-areas:
+                "main1_1 main1_1"
+                "main1_2 main1_3";
+                }
+    
+                .main2 {
+                display: grid;
+                grid-template-columns: 0.5fr 3.5fr;
+                grid-template-rows: 1fr 0.5fr; 
+                grid-template-areas:
+                "main1_1 main1_1"
+                "main1_2 main1_3";
+                }
+    
+                .main3 {
+                display: grid;
+                grid-template-columns: 0.5fr 3.5fr;
+                grid-template-rows: 1fr 0.5fr; 
+                grid-template-areas:
+                "main1_1 main1_1"
+                "main1_2 main1_3";
+                }
+    
+                .main4 {
+                display: grid;
+                grid-template-columns: 0.5fr 3.5fr;
+                grid-template-rows: 1fr 0.5fr; 
+                grid-template-areas:
+                "main1_1 main1_1"
+                "main1_2 main1_3";
+                }
+    
+                .main5 {
+                display: grid;
+                grid-template-columns: 0.5fr 3.5fr;
+                grid-template-rows: 1fr 0.5fr; 
+                grid-template-areas:
+                "main1_1 main1_1"
+                "main1_2 main1_3";
+                }
+    
+                .main6 {
+                display: grid;
+                grid-template-columns: 0.5fr 3.5fr;
+                grid-template-rows: 1fr 0.5fr; 
+                grid-template-areas:
+                "main1_1 main1_1"
+                "main1_2 main1_3";
+                }
+    }
